@@ -17,13 +17,13 @@ class App extends React.Component {
 		return (
 			<div style={{'minHeight':'100vh'}}>
 				<TopNav/>
-				<div className="container-fluid bg-inverse">
+				<div className="container-fluid bg-clear underNav">
 					<div className="container text-center text-white">
 						<h1 className="display-1">Redoot</h1>
 						<img src="/assets/img/redootLogoWhite.png" className="img-fluid mainLogo" alt="redoot"/>
 						<h1 className="display-4">A Redux-Bootstrap 4 Website Starter</h1>
 						
-							<a href="https://github.com/SydBal/redoot" className="btn btn-secondary" role="button">
+							<a href="https://github.com/SydBal/redoot" className="btn btn-secondary gitBtn" role="button">
 								<i className="zmdi zmdi-github zmdi-hc-lg"></i> Source
 							</a>
 					</div>

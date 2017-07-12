@@ -1,6 +1,22 @@
 @import "partials/root";
 
+.bg-clear{
+	background:rgba(0,0,0,0);
+}
+
+#redootNav{
+	border-bottom: white 1px solid;
+}
+
+.underNav{
+	padding-top: 56px;
+}
+
 .mainLogo{
 	max-height: 50vh;
 	padding: 10px;
+}
+
+.gitBtn{
+	margin: 10px;
 }
