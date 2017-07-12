@@ -1,37 +1,16 @@
 @import "partials/root";
 
-h1{
-	margin:10px 0;
+$bsPurp: #563D7C;
+$rxPurp: #7C4FBE;
+
+.purpleBG{
+	background: linear-gradient(to bottom right, $bsPurp, $rxPurp);
+	padding-bottom: 10px;
+	border-bottom: $bsPurp 1px solid;
+	border-top: $rxPurp 1px solid;
 }
 
-#headBlock{
-	background: rgba(0,0,0,0.4);
-	padding:8px 0;
-}
-
-#headBlockContainer{
-	background: white;
-	border-radius: 3px;
-	max-width: 800px;
-}
-
-#bodyBlock{
-	background: rgba(0,0,0,0);
-}
-
-#bodyBlockContainer{
-	background: rgba(0,0,0,.4);
-	max-width: 600px;
-	border-radius: 0 0 3px 3px;
-	padding: 0 8px;
-}
-
-#bodyBlockContents{
-	width: 100%;
-	padding: 8px;
-	margin-bottom: 8px;
-	margin-top:-8px;
-	background: white;
-	border-radius: 0 0 3px 3px;
-	
+.mainLogo{
+	max-height: 50vh;
+	padding: 10px;
 }

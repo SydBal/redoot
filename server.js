@@ -9,9 +9,9 @@ app.use('/', (req, res) => {
 });
 
 // Config for Heroku Buildpack
-const port = process.env.PORT || 4200;
+const port = process.env.PORT || 80;
 
 // Service!
 app.listen(port, () => {
-  console.log('listening on *:4200');
+  console.log('listening on *:80');
 });

@@ -15,12 +15,14 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className="bg-inverse" style={{'min-height':'100vh'}}>
+			<div style={{'maxHeight':'100vh'}}>
 				<TopNav/>
-				<div className="container text-center text-white">
-					<h1 className="display-1">Redoot</h1>
-					<h1>The Redux-Bootstrap4 Starter</h1>
-					Includes simple Express server and Webpack dev build.
+				<div className="container-fluid purpleBG">
+					<div className="container text-center text-white">
+						<h1 className="display-1">Redoot</h1>
+						<img src="/assets/img/redootLogoWhite.png" className="img-fluid mainLogo" alt="redoot"/>
+						<h1 className="display-4">A Redux-Bootstrap 4 Website Starter</h1>
+					</div>
 				</div>
 			</div>
 		);
