@@ -1,15 +1,5 @@
 @import "partials/root";
 
-$bsPurp: #563D7C;
-$rxPurp: #7C4FBE;
-
-.purpleBG{
-	background: linear-gradient(to bottom right, $bsPurp, $rxPurp);
-	padding-bottom: 10px;
-	border-bottom: $bsPurp 1px solid;
-	border-top: $rxPurp 1px solid;
-}
-
 .mainLogo{
 	max-height: 50vh;
 	padding: 10px;
