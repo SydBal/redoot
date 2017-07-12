@@ -22,10 +22,9 @@ class App extends React.Component {
 						<h1 className="display-1">Redoot</h1>
 						<img src="/assets/img/redootLogoWhite.png" className="img-fluid mainLogo" alt="redoot"/>
 						<h1 className="display-4">A Redux-Bootstrap 4 Website Starter</h1>
-						
-							<a href="https://github.com/SydBal/redoot" className="btn btn-secondary gitBtn" role="button">
-								<i className="zmdi zmdi-github zmdi-hc-lg"></i> Source
-							</a>
+						<a href="https://github.com/SydBal/redoot" className="btn btn-secondary gitBtn" role="button">
+							<i className="zmdi zmdi-github zmdi-hc-lg"/> Source
+						</a>
 					</div>
 				</div>
 			</div>
