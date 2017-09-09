@@ -12,7 +12,7 @@ class SliderBinding extends React.Component {
 	render() {
 		return (
             <div>
-                <h1>Coming Soon!</h1>
+                <h1>Slider Binding</h1>
             </div>
 		);
 	}

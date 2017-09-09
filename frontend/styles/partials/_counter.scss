@@ -1,3 +1,20 @@
 .btn-counter{
     margin: 0 5px;
 }
+
+
+
+
+.inc-flash{
+    background:blue !important;
+    transition-duration: 0s;
+}
+
+.dec-flash{
+    background: red !important;  
+    transition-duration: 0s;
+}
+.flasher{
+    background:rgb(50,55,56);
+    transition: all .4s linear;
+}

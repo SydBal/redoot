@@ -9,18 +9,24 @@ class TextBinding extends React.Component {
 		this.props.setName(event.target.value);
 	}
 
-    findVowels(str){
-        return (str.match(/[aeiouy]/ig)||[]);
-    }
-
 	render() {
 		return (
-            <div>
+            <div className="textBindingExample">
                 <h1>2-Way Text Binding</h1>
-                <input onChange={(e)=>this.handleTextChange(e)} type="text" className="form-control" aria-describedby="textInput" value={this.props.name} placeholder="Input Some Text"/>
-                <p>Word: <strong>{this.props.name}</strong><br/>
-                Vowels Used: <strong>{this.findVowels(this.props.name)}</strong><br/>
-                <code>str.match(/[aeiouy]/ig)||[])</code></p>
+				<form>
+					<div className="form-group">
+                		<textArea className="form-control bg-inverse text-white" aria-describedby="textInput"
+					   onChange={(e)=>this.handleTextChange(e)} type="text" value={this.props.name} placeholder="Input Some Text"/>
+					</div>
+				</form>
+					<div className="text-output">
+						<code className="bg-inverse">'{this.props.name}'.match(/[aeiouy]/ig)||[])</code><br/>
+						{(this.props.name.match(/[aeiouy]/ig)||[]).length>0?
+							<div>Vowels Used: <strong>{this.props.name.match(/[aeiouy]/ig)||[]}</strong></div>
+							:
+							'No Vowels Used'
+						}
+					</div>
             </div>
 		);
 	}

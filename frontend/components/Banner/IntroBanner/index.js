@@ -9,7 +9,8 @@ class IntroBanner extends React.Component {
                 <div className="container text-center text-white">
                     <h1 className="display-3">Redoot</h1>
                     <img src="/assets/img/redootLogoWhite.png" className="img-fluid mainLogo" alt="redoot"/>
-                    <h1 className="display-5">A Redux-Bootstrap 4 Website Starter</h1>
+                    <h3>A Redux + Bootstrap 4 Website Starter</h3>
+                    <h3>Powered by NodeJS</h3>
                     <a href="https://github.com/SydBal/redoot" className="btn btn-secondary gitBtn" role="button">
                         <i className="zmdi zmdi-github zmdi-hc-lg"/> Source
                     </a>

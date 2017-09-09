@@ -12,7 +12,7 @@ class ComponentExampleBanner extends React.Component {
 		return (
             <div className="banner componentExample container-fluid">
                 <div className="container text-center text-white bg-inverse">
-                    <div className="display-4">Example Components</div>
+                    <h1 className="display-4">Example Components</h1>
                     <div className="row">
                         <div className="col-lg-6">
                             <Counter/>
