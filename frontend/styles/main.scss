@@ -1,4 +1,7 @@
 @import "partials/root";
+@import "partials/componentExample";
+@import "partials/counter";
+@import "partials/gridExample";
 
 .bg-clear{
 	background:rgba(0,0,0,0);
@@ -19,4 +22,9 @@
 
 .gitBtn{
 	margin: 10px;
+}
+
+.banner .container{
+	padding-bottom: 10px;
+	margin-bottom: 20px;
 }
