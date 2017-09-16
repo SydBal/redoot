@@ -11,24 +11,42 @@ class Counter extends React.Component {
         }
     }
 
+    componentDidUpdate(prevProps, prevState){
+        if(this.state.bg!=''){
+            window.requestAnimationFrame(()=>{
+                let newState = Object.assign({}, this.state)
+                newState.bg = ''
+                this.setState(newState)
+            }) 
+        }
+    }
+
 	render() {
+        let flash = (color) => {
+            window.requestAnimationFrame(()=>{
+                let newState = Object.assign({}, this.state)
+                newState.bg = color
+                this.setState(newState)
+            })
+        }
+
 		return (
-            <div className={this.state.bg=='inc'?'inc-flash':this.state.bg=='dec'?'dec-flash':'flasher'}>
+            <div className={this.state.bg==''?'flasher':'flash'} style={{'background':this.state.bg}}>
                 <h1>Counter</h1>
                 <p>Value: <strong>{this.props.count}</strong></p>
                 <p>
                     <button type="button" className="btn btn-counter btn-outline-primary" 
                             onClick={()=>{
-                                this.state.bg='inc';this.setState(this.state);this.props.increment();
-                                setTimeout(()=>{this.state.bg='';this.setState(this.state);},20)}
-                            }>
+                                this.props.increment()
+                                flash('blue')
+                            }}>
                         <strong>Increment</strong>
                     </button>
                     <button type="button" className="btn btn-counter btn-outline-danger" 
                             onClick={()=>{
-                                this.state.bg='dec';this.setState(this.state);this.props.decrement()
-                                setTimeout(()=>{this.state.bg='';this.setState(this.state);},20)}
-                            }>
+                                this.props.decrement()
+                                flash('red')
+                            }}>
                         <strong>Decrement</strong>
                     </button>
                 </p>
