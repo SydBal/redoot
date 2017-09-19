@@ -1,7 +1,7 @@
 const path = require(`path`);
 const webpack = require(`webpack`);
 
-let watch = process.env.NODE_ENV!=`prod`;
+let watch = process.env.NODE_ENV!=`production`;
 
 module.exports = {
 	entry: path.join(__dirname, `frontend/components/index.js`),
