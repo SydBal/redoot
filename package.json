@@ -11,10 +11,10 @@
   ],
   "scripts": {
     "prestart": "webpack",
-    "start": "cross-env NODE_ENV=prod node server",
+    "start": "cross-env NODE_ENV=production node server",
     "server": "node server",
     "watch": "webpack",
-    "dev": "cross-env NODE_ENV=dev concurrently --kill-others \"npm run watch\" \"npm run server\""
+    "dev": "cross-env NODE_ENV=development concurrently --kill-others \"npm run watch\" \"npm run server\""
   },
   "dependencies": {
     "babel-core": "^6.24.1",
