@@ -3,6 +3,7 @@
 @import "partials/counter";
 @import "partials/gridExample";
 @import "partials/textBindingExample";
+@import "partials/footer";
 
 .bg-clear{
 	background:rgba(0,0,0,0);
@@ -13,19 +14,23 @@
 }
 
 .underNav{
-	padding-top: 56px;
+	padding-top: 66px;
 }
 
 .mainLogo{
-	max-height: 50vh;
+	max-height: 25vh;
 	padding: 10px;
 }
 
 .gitBtn{
-	margin: 10px;
+	margin-top: 10px;
+	background: rgba(0,0,0,.35) !important;
+	border-width: 0px;
+	&:hover{
+		background: rgba(255,255,255,.25) !important;
+	}
 }
 
-.banner .container{
-	padding-bottom: 10px;
-	margin-bottom: 20px;
+.banner{
+	padding-bottom: 20px;
 }

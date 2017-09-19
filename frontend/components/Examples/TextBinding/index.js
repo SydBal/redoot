@@ -12,19 +12,19 @@ class TextBinding extends React.Component {
 	render() {
 		return (
             <div className="textBindingExample">
-                <h1>2-Way Text Binding</h1>
+                <h1>Text Binding</h1>
 				<form>
 					<div className="form-group">
-                		<textArea className="form-control bg-inverse text-white" aria-describedby="textInput"
+                		<textarea className="form-control text-white" aria-describedby="textInput"
 					   onChange={(e)=>this.handleTextChange(e)} type="text" value={this.props.name} placeholder="Input Some Text"/>
 					</div>
 				</form>
 					<div className="text-output">
-						<code className="bg-inverse">'{this.props.name}'.match(/[aeiouy]/ig)||[])</code><br/>
+						<code className="bg-clear">'{this.props.name}'.match(/[aeiouy]/ig)||[])</code><br/>
 						{(this.props.name.match(/[aeiouy]/ig)||[]).length>0?
-							<div>Vowels Used: <strong>{this.props.name.match(/[aeiouy]/ig)||[]}</strong></div>
+							<div className="text-primary">Vowels Used: <strong>{this.props.name.match(/[aeiouy]/ig)||[]}</strong></div>
 							:
-							'No Vowels Used'
+							<div className="text-danger">No Vowels Used</div>
 						}
 					</div>
             </div>
