@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "prestart": "webpack",
-    "start": "cross-env NODE_ENV=production node server",
+    "start": "node server",
     "server": "node server",
     "watch": "webpack",
     "dev": "cross-env NODE_ENV=development concurrently --kill-others \"npm run watch\" \"npm run server\""
