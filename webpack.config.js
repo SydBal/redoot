@@ -1,16 +1,16 @@
 const path = require(`path`);
 const webpack = require(`webpack`);
 
-const watch = process.env.NODE_ENV==`development`;
-
 module.exports = {
-	entry: path.join(__dirname, `frontend/components/index.js`),
 	resolve: {
 		alias: {
 			Frontend: path.resolve(__dirname, `frontend/`),
+			Styles: path.resolve(__dirname, `frontend/styles`),
 			API: path.resolve(__dirname, `api/`)
 		}
 	},
+	devtool: `source-map`,
+	entry: path.join(__dirname, `frontend/components/index.js`),
 	output: {
 		path : path.resolve(__dirname, `frontend/static`),
 		publicPath: `/`,
@@ -29,7 +29,23 @@ module.exports = {
 			},
 			{
 				test: /\.(sass|scss)$/,
-				use: [`style-loader`, `css-loader`, `sass-loader`],
+				use: [
+					{ loader: `style-loader`, options: { sourceMap: true }}, 
+					{ loader: 'css-loader', options: { sourceMap: true, importLoaders: 1 } },
+					{
+						loader: 'postcss-loader',
+						options: {
+							sourceMap: true,
+							plugins: (loader) => [
+								require('postcss-import')(),
+								require('postcss-custom-properties')(),
+								require('autoprefixer')(),
+								require('csswring')(),
+								require('postcss-nested')()
+							]
+						}
+					}
+				],
 				include: [
 					path.join(__dirname, `node_modules/bootstrap-sass/assets/stylesheets`),
 					path.join(__dirname, `frontend/styles`)
@@ -39,7 +55,5 @@ module.exports = {
 	},
 	stats: {
 		colors: true
-	},
-	devtool: `source-map`,
-	watch: watch
+	}
 };
