@@ -12,7 +12,7 @@ module.exports = {
 	devtool: `source-map`,
 	entry: path.join(__dirname, `frontend/components/index.js`),
 	output: {
-		path : path.resolve(__dirname, `frontend/static`),
+		path : path.resolve(__dirname, `frontend/build`),
 		publicPath: `/`,
 		filename : `app.js`
 	},

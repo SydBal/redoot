@@ -3,4 +3,5 @@ node_modules
 .idea
 .vscode
 
-frontend/static/app.js*
+frontend/build/app.js*
+frontend/build/styles.css*

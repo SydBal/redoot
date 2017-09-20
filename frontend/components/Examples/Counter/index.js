@@ -33,23 +33,22 @@ class Counter extends React.Component {
 		return (
             <div className={this.state.bg==''?'flasher':'flash'} style={{'background':this.state.bg}}>
                 <h1>Counter</h1>
-                <p>Value: <strong>{this.props.count}</strong></p>
-                <p>
-                    <button type="button" className="btn btn-counter btn-outline-primary" 
-                            onClick={()=>{
-                                this.props.increment()
-                                flash('blue')
-                            }}>
-                        <strong>Increment</strong>
-                    </button>
-                    <button type="button" className="btn btn-counter btn-outline-danger" 
-                            onClick={()=>{
-                                this.props.decrement()
-                                flash('red')
-                            }}>
-                        <strong>Decrement</strong>
-                    </button>
-                </p>
+                Value: <strong>{this.props.count}</strong>
+                <br/>
+                <button type="button" className="btn btn-counter btn-outline-primary" 
+                        onClick={()=>{
+                            this.props.increment()
+                            flash('blue')
+                        }}>
+                    <strong>Increment</strong>
+                </button>
+                <button type="button" className="btn btn-counter btn-outline-danger" 
+                        onClick={()=>{
+                            this.props.decrement()
+                            flash('red')
+                        }}>
+                    <strong>Decrement</strong>
+                </button>
             </div>
 		);
 	}

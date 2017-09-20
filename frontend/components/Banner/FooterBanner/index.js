@@ -7,6 +7,7 @@ class FooterBanner extends React.Component {
 		return (
             <div className="banner container-fluid footer">
                 <div className="container text-center text-white">
+                    <img src="/img/redootLogoWhite.png" className="footLogo" alt="redoot"/>
                     <p>
                         Redoot is released under the MIT license.
                     </p>

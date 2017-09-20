@@ -1,5 +1,5 @@
 .footer{
-    background:rgba(0,0,0,.35);
+    background:rgba(0,0,0,.25);
     margin-top: 10px;
     padding-top: 20px;
     border-top: 1px solid white;
@@ -8,5 +8,15 @@
         p{
             margin-bottom: 5px;
         }
+    }
+
+    .footLogo{
+        position: absolute;
+        max-height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        opacity: 0.3;
     }
 }
