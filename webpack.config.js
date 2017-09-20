@@ -6,7 +6,7 @@ module.exports = {
 	resolve: {
 		alias: {
 			Frontend: path.resolve(__dirname, `frontend/`),
-			API: path.resolve(__dirname, `api/`)
+			Redux: path.resolve(__dirname, `frontend/redux/`)
 		}
 	},
 	devtool: `source-map`,

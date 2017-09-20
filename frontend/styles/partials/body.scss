@@ -4,6 +4,10 @@ body{
 	word-wrap: break-word;
 }
 
+.app-container{
+	min-height: 100vh;
+}
+
 .bg-clear{
 	background:rgba(0,0,0,0);
 }
@@ -25,6 +29,10 @@ body{
 	margin-top: 10px;
 	background: rgba(0,0,0,.35) !important;
 	border-width: 0px;
+	padding:13px 16px;
+	i{
+		margin-right: 2px;
+	}
 	&:hover{
 		background: rgba(255,255,255,.25) !important;
 	}

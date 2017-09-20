@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import { setName } from 'Frontend/actions/name'
+import { setName } from 'Redux/name/name.spec'
 
 class TextBinding extends React.Component {
 

@@ -1,7 +1,7 @@
 /*
  * Imports
  */
-import {INCREMENT, DECREMENT} from '../actions/count';
+import {INCREMENT, DECREMENT} from './count.spec';
 
 /*
  * Initial State

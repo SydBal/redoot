@@ -24,16 +24,4 @@ class FooterBanner extends React.Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
-		
-	}
-};
-
-const mapDispatchToProps = (dispatch) => {
-	return {
-
-	}
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(FooterBanner)
+export default connect()(FooterBanner)

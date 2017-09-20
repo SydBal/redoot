@@ -35,16 +35,4 @@ class ComponentExampleBanner extends React.Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
-		
-	}
-};
-
-const mapDispatchToProps = (dispatch) => {
-	return {
-
-	}
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ComponentExampleBanner)
+export default connect()(ComponentExampleBanner)

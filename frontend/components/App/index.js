@@ -11,7 +11,7 @@ require('Frontend/styles/root.scss');
 class App extends React.Component {
 	render() {
 		return (
-			<div style={{'minHeight':'100vh'}}>
+			<div className="app-container">
 				<TopNav/>
 				<IntroBanner/>
 				<ComponentExampleBanner/>
@@ -21,16 +21,4 @@ class App extends React.Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
-
-	}
-};
-
-const mapDispatchToProps = (dispatch) => {
-	return {
-
-	}
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect()(App);

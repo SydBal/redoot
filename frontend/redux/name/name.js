@@ -1,7 +1,7 @@
 /*
  * Imports
  */
-import {NAME_SET} from '../actions/name';
+import {NAME_SET} from './name.spec';
 
 /*
  * Initial State

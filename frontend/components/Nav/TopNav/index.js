@@ -30,16 +30,4 @@ class TopNav extends React.Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
-		
-	}
-};
-
-const mapDispatchToProps = (dispatch) => {
-	return {
-
-	}
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TopNav)
+export default connect()(TopNav)
