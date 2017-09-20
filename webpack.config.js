@@ -27,10 +27,7 @@ module.exports = {
 					options: {
 						presets: [`es2016`, `react`, `stage-2`]
 					}
-				}],
-				include: [
-					path.join(__dirname, `frontend`)
-				]
+				}]
 			},
 
 			//SASS Bundle, including Bootstrap 4
@@ -45,7 +42,7 @@ module.exports = {
 						loader: 'css-loader',
 						options: {
 							sourceMap: true,
-							importLoaders: 2
+							importLoaders: 1
 						}
 					},{
 						loader: 'postcss-loader',
