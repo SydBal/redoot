@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-
 import TopNav from 'Frontend/components/Nav/TopNav';
 import IntroBanner from 'Frontend/components/Banner/IntroBanner';
 import ComponentExampleBanner from 'Frontend/components/Banner/ComponentExampleBanner';

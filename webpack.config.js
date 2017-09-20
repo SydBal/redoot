@@ -1,11 +1,11 @@
 const path = require(`path`);
 const webpack = require(`webpack`);
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 	resolve: {
 		alias: {
 			Frontend: path.resolve(__dirname, `frontend/`),
-			Styles: path.resolve(__dirname, `frontend/styles`),
 			API: path.resolve(__dirname, `api/`)
 		}
 	},
@@ -18,6 +18,8 @@ module.exports = {
 	},
 	module: {
 		rules: [
+
+			//React Bundler
 			{
 				test: /\.js$/,
 				use: [{
@@ -25,34 +27,53 @@ module.exports = {
 					options: {
 						presets: [`es2016`, `react`, `stage-2`]
 					}
-				}]
+				}],
+				include: [
+					path.join(__dirname, `frontend`)
+				]
 			},
+
+			//SASS Bundle, including Bootstrap 4
 			{
-				test: /\.(sass|scss)$/,
-				use: [
-					{ loader: `style-loader`, options: { sourceMap: true }}, 
-					{ loader: 'css-loader', options: { sourceMap: true, importLoaders: 1 } },
-					{
+				test: /\.(sass|scss|css)$/,
+				use: ExtractTextPlugin.extract({
+					fallback:{ 
+						loader: `style-loader`,
+						options: { sourceMap: true }
+					},
+					use: [{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true,
+							importLoaders: 2
+						}
+					},{
 						loader: 'postcss-loader',
 						options: {
 							sourceMap: true,
-							plugins: (loader) => [
+							plugins: [
+								require('cssnano')({discardComments: {removeAll: true}}),
 								require('postcss-import')(),
+								require('postcss-cssnext')(),
 								require('postcss-custom-properties')(),
-								require('autoprefixer')(),
-								require('csswring')(),
-								require('postcss-nested')()
+								require('postcss-nested'),
+								require('postcss-flexbugs-fixes'),
+								require('csswring')({removeallcomments: true})
 							]
 						}
-					}
-				],
+					},{
+						loader: 'sass-loader'
+					}]
+				}),
 				include: [
-					path.join(__dirname, `node_modules/bootstrap-sass/assets/stylesheets`),
 					path.join(__dirname, `frontend/styles`)
 				]
 			}
 		],
 	},
+	plugins: [
+		new ExtractTextPlugin("styles.css"),
+	],
 	stats: {
 		colors: true
 	}
