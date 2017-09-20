@@ -6,7 +6,7 @@ import IntroBanner from 'Frontend/components/Banner/IntroBanner';
 import ComponentExampleBanner from 'Frontend/components/Banner/ComponentExampleBanner';
 import FooterBanner from 'Frontend/components/Banner/FooterBanner';
 
-require('Frontend/styles/main.scss');
+require('Frontend/styles/root.scss');
 
 class App extends React.Component {
 	render() {
