@@ -1,21 +1,24 @@
 /*
- * Action Types
+ * Imports
  */
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
+import {INCREMENT, DECREMENT} from './';
 
 /*
- * Action Creators
+ * Initial State
  */
+const initialState = 0;
 
-export function increment() {
-	return {
-		type: INCREMENT,
-	};
-}
+/*
+ * Reducer Function
+ */
+let count = (state = initialState, action) => {
+	switch (action.type) {
+		case INCREMENT:
+			return state + 1;
+		case DECREMENT:
+			return state - 1;
+	}
+	return state;
+};
 
-export function decrement() {
-	return {
-		type: DECREMENT,
-	};
-}
+export default count;

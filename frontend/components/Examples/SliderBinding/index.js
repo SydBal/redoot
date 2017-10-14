@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import { setName } from 'Redux/name/name.spec'
+import { setName } from 'Redux/name'
 
 class SliderBinding extends React.Component {
 

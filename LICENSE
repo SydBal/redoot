@@ -1,5 +1,12 @@
 Copyright (c) 2017 Dominic Balassone (dominic.balassone@gmail.com)
 
+:: NOTE :: 
+All packages used in this project are also subject to their own
+licenses. React (https://github.com/facebook/react/blob/master/LICENSE),
+created by Facebook, and one of the main components of this app,
+has its own semi-restrictive license that your should read and understand 
+before embracing the use of this tool.
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights

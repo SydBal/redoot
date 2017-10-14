@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import { increment, decrement } from 'Redux/count/count.spec'
+import { increment, decrement } from 'Redux/count'
 
 class Counter extends React.Component {
     constructor(props){

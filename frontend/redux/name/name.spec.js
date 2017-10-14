@@ -1,15 +1,22 @@
 /*
- * Action Types
+ * Imports
  */
-export const NAME_SET = 'NAME_SET';
+import {NAME_SET} from './';
 
 /*
- * Action Creators
+ * Initial State
  */
+const initialState = '';
 
-export function setName(name) {
-	return {
-		type: NAME_SET,
-		name
-	};
+/*
+ * Reducer Function
+ */
+function name(state = initialState, action) {
+	switch (action.type) {
+		case NAME_SET:
+			return action.name;
+	}
+	return state;
 }
+
+export default name;
