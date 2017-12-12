@@ -30,7 +30,7 @@ module.exports = {
 				}]
 			},
 
-			//SASS Bundle, including Bootstrap 4
+			//SASS Bundler, including Bootstrap 4
 			{
 				test: /\.(sass|scss|css)$/,
 				use: ExtractTextPlugin.extract({
@@ -49,13 +49,14 @@ module.exports = {
 						options: {
 							sourceMap: true,
 							plugins: [
+								require('autoprefixer')(),
+								require('csswring')({removeallcomments: true}),
 								require('cssnano')({discardComments: {removeAll: true}}),
-								require('postcss-import')(),
 								require('postcss-cssnext')(),
 								require('postcss-custom-properties')(),
-								require('postcss-nested'),
 								require('postcss-flexbugs-fixes'),
-								require('csswring')({removeallcomments: true})
+								require('postcss-import')(),
+								require('postcss-nested')
 							]
 						}
 					},{
