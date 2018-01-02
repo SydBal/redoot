@@ -1,6 +1,6 @@
 body{
 	//background-color: #292B2C;
-	background: linear-gradient(-130deg, #563D7C, #292B2C);
+	background: linear-gradient(230deg, #563D7C, #292B2C);
 	word-wrap: break-word;
 	height: 100%;
 }
@@ -39,6 +39,10 @@ a{
 	max-height: 35vh;
 	padding: 10px;
 	padding-bottom: 20px;
+}
+
+#brandImg{
+	margin-right: 4px;
 }
 
 .gitBtn{
