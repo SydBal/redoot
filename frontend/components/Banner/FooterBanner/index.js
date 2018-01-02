@@ -3,9 +3,13 @@ import {connect} from 'react-redux';
 
 class FooterBanner extends React.Component {
 
+    componentDidMount(){
+        
+    }
+
 	render() {
 		return (
-            <div className="banner container-fluid footer">
+            <div className="banner container-fluid footer" id="stickyFooter">
                 <div className="container text-center text-white">
                     <img src="/img/redootLogoWhite.png" className="footLogo" alt="redoot"/>
                     <p>
@@ -15,10 +19,13 @@ class FooterBanner extends React.Component {
                         Please feel free to use this as a tool to start your own React-Redux + Bootstrap website.
                     </p>
                     <p>
-                        Good luck with your projects, and leave feedback on GitHub!
+                        Good luck with your projects, and leave feedback on <a href="http://github.com/SydBal/redoot">GitHub!</a>
                     </p>
                     Sincerely - Dominic Balassone
                 </div>
+                <script>
+                    ()=>console.log(document.getElementById("stickyFooter").style)
+                    </script>
             </div>
 		);
 	}

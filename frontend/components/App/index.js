@@ -13,8 +13,10 @@ class App extends React.Component {
 		return (
 			<div className="app-container">
 				<TopNav/>
-				<IntroBanner/>
-				<ComponentExampleBanner/>
+				<div className="app-content">
+					<IntroBanner/>
+					<ComponentExampleBanner/>
+				</div>
 				<FooterBanner/>
 			</div> 
 		);
