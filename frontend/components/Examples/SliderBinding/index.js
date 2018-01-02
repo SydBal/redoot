@@ -26,11 +26,11 @@ class SliderBinding extends React.Component {
 	}
 
 	changeC2B(e){
-		this.props.color1b(e.target.valueAsNumber);
+		this.props.color2b(e.target.valueAsNumber);
 	}
 
 	changeDirection(e){
-		this.props.changeDirection(e.target.valueAsNumber);
+		this.props.direction(e.target.valueAsNumber);
 	}
 
 	render() {
@@ -38,19 +38,27 @@ class SliderBinding extends React.Component {
             <div>
                 <h1>Background Slider Binding</h1>
 				<div className="sliderContainer">
-					{this.props.background.color1r}
-					<input type="range" min="0" max="255" step="1" value={this.props.background.color1r} onChange={(e)=>this.changeC1R(e)}/><br/>
-					{this.props.background.color1g}
-					<input type="range" min="0" max="255" step="1" value={this.props.background.color1g} onChange={(e)=>this.changeC1G(e)}/><br/>
-					{this.props.background.color1b}	
-					<input type="range" min="0" max="255" step="1" value={this.props.background.color1b} onChange={(e)=>this.changeC1B(e)}/><br/>
-					{this.props.background.color2r}
-					<input type="range" min="0" max="255" step="1" value={this.props.background.color2r} onChange={(e)=>this.changeC2R(e)}/><br/>
-					{this.props.background.color2g}
-					<input type="range" min="0" max="255" step="1" value={this.props.background.color2b} onChange={(e)=>this.changeC2G(e)}/><br/>
-					{this.props.background.color2b}
-					<input type="range" min="0" max="255" step="1" value={this.props.background.color2c} onChange={(e)=>this.changeC2B(e)}/><br/>	
-					{this.props.background.direction}
+					<div className="row">
+						<div className="col-md-6">
+							<h4>Primary Color</h4>
+							<h5>Red: {this.props.background.color1r}</h5>
+							<input type="range" min="0" max="255" step="1" value={this.props.background.color1r} onChange={(e)=>this.changeC1R(e)}/>
+							<h5>Green: {this.props.background.color1g}</h5>
+							<input type="range" min="0" max="255" step="1" value={this.props.background.color1g} onChange={(e)=>this.changeC1G(e)}/>
+							<h5>Blue: {this.props.background.color1b}</h5>	
+							<input type="range" min="0" max="255" step="1" value={this.props.background.color1b} onChange={(e)=>this.changeC1B(e)}/>
+						</div>
+						<div className="col-md-6">
+							<h4>Secondary Color</h4>
+							<h5>Red: {this.props.background.color2r}</h5>
+							<input type="range" min="0" max="255" step="1" value={this.props.background.color2r} onChange={(e)=>this.changeC2R(e)}/><br/>
+							<h5>Green: {this.props.background.color2g}</h5>
+							<input type="range" min="0" max="255" step="1" value={this.props.background.color2g} onChange={(e)=>this.changeC2G(e)}/><br/>
+							<h5>Blue: {this.props.background.color2b}</h5>
+							<input type="range" min="0" max="255" step="1" value={this.props.background.color2b} onChange={(e)=>this.changeC2B(e)}/><br/>	
+						</div>
+					</div>
+					<h4>Direction: {this.props.background.direction} degrees</h4>
 					<input type="range" min="0" max="360" step="1" value={this.props.background.direction} onChange={(e)=>this.changeDirection(e)}/><br/>
 					<button type="button" className="btn btn-counter btn-outline-danger" onClick={this.props.resetBackground}>
 						Reset
