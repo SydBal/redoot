@@ -3,10 +3,6 @@ import {connect} from 'react-redux';
 
 class FooterBanner extends React.Component {
 
-    componentDidMount(){
-        
-    }
-
 	render() {
 		return (
             <div className="banner container-fluid footer" id="stickyFooter">
@@ -23,9 +19,6 @@ class FooterBanner extends React.Component {
                     </p>
                     Sincerely - Dominic Balassone
                 </div>
-                <script>
-                    ()=>console.log(document.getElementById("stickyFooter").style)
-                    </script>
             </div>
 		);
 	}
