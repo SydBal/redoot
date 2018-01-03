@@ -5,6 +5,13 @@ import { color1r, color1g, color1b, color2r, color2g, color2b, direction, resetB
 
 class SliderBinding extends React.Component {
 
+	componentDidUpdate(){
+		console.log('hello')
+		document.body.style.background = `linear-gradient(${this.props.background.direction}deg, 
+														  rgb(${this.props.background.color1r}, ${this.props.background.color1g}, ${this.props.background.color1b}),
+														  rgb(${this.props.background.color2r}, ${this.props.background.color2g}, ${this.props.background.color2b}))`
+	}
+
 	changeC1R(e){
 		this.props.color1r(e.target.valueAsNumber);
 	}
@@ -39,7 +46,7 @@ class SliderBinding extends React.Component {
                 <h1>Background Slider Binding</h1>
 				<div className="sliderContainer">
 					<div className="row">
-						<div className="col-md-6">
+						<div className="col-sm-6">
 							<h4>Primary Color</h4>
 							<h5>Red: {this.props.background.color1r}</h5>
 							<input type="range" min="0" max="255" step="1" value={this.props.background.color1r} onChange={(e)=>this.changeC1R(e)}/>
@@ -48,7 +55,7 @@ class SliderBinding extends React.Component {
 							<h5>Blue: {this.props.background.color1b}</h5>	
 							<input type="range" min="0" max="255" step="1" value={this.props.background.color1b} onChange={(e)=>this.changeC1B(e)}/>
 						</div>
-						<div className="col-md-6">
+						<div className="col-sm-6">
 							<h4>Secondary Color</h4>
 							<h5>Red: {this.props.background.color2r}</h5>
 							<input type="range" min="0" max="255" step="1" value={this.props.background.color2r} onChange={(e)=>this.changeC2R(e)}/><br/>
