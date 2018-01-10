@@ -1,8 +1,20 @@
 .modal-content{
     background: #292B2C;
-}
 
-button.close{
-    color:white;
-    text-shadow: none;
+    .container-fluid{
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    .row{
+        & > div{
+            background:rgba(255,255,255,.1);
+            border: 1px solid white;
+        }
+    }
+
+    button.close{
+        color:white;
+        text-shadow: none;
+    }
 }
