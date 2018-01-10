@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Counter from 'Frontend/components/Examples/Counter';
+import CounterExample from 'Frontend/components/Examples/CounterExample';
 import TextBinding from 'Frontend/components/Examples/TextBinding';
 import SliderBinding from 'Frontend/components/Examples/SliderBinding';
-import GridExample from 'Frontend/components/Examples/GridExample';
+import ModalExample from 'Frontend/components/Examples/ModalExample';
 
 class ComponentExampleBanner extends React.Component {
 
@@ -15,7 +15,7 @@ class ComponentExampleBanner extends React.Component {
                     <h1 className="display-4">Example Components</h1>
                     <div className="row">
                         <div className="col-lg-6">
-                            <Counter/>
+                            <CounterExample/>
                         </div>
                         <div className="col-lg-6">
                             <TextBinding/>
@@ -26,7 +26,7 @@ class ComponentExampleBanner extends React.Component {
                             <SliderBinding/>
                         </div>
                         <div className="col-lg-6">
-                            <GridExample/>
+                            <ModalExample/>
                         </div>
                     </div>
                 </div>

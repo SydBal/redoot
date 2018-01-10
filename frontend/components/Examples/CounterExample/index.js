@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import { increment, decrement } from 'Redux/count'
 
-class Counter extends React.Component {
+class CounterExample extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -71,4 +71,4 @@ const mapDispatchToProps = (dispatch) => {
 	}
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+export default connect(mapStateToProps, mapDispatchToProps)(CounterExample)
