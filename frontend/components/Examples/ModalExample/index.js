@@ -16,7 +16,7 @@ class ModalExample extends React.Component {
                     Launch demo modal
                 </button>
 
-                <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
@@ -26,8 +26,12 @@ class ModalExample extends React.Component {
                                 </button>
                             </div>
                             <div className="modal-body">
-                                ...
-                      </div>
+                                <h5>Popover in a modal</h5>
+                                <p>This <a href="#" role="button" className="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>
+                                <hr/>
+                                <h5>Tooltips in a modal</h5>
+                                <p><a href="#" className="tooltip-test" title="Tooltip">This link</a> and <a href="#" className="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+                            </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-outline-secondary" data-dismiss="modal">Close</button>
                                 <button type="button" className="btn btn-outline-primary">Save changes</button>

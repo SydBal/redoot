@@ -4,7 +4,8 @@ input[type=range]{
 
 .slider {
     -webkit-appearance: none;
-    width: 100%;
+	width: 100%;
+	border-radius:8px;
 }
 
 .slider::-webkit-slider-thumb {
@@ -13,12 +14,14 @@ input[type=range]{
     width: 16px;
     height: 16px;
     cursor: pointer;
-    border-radius:8px;
+	border-radius:8px;
+	background:grey;
 }
 
 .slider::-moz-range-thumb {
     width: 16px;
     height: 16px;
     cursor: pointer;
-    border-radius:8px;
+	border-radius:8px;
+	background:grey;
 }
