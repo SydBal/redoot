@@ -22,6 +22,7 @@ module.exports = {
 			//React Bundler
 			{
 				test: /\.js$/,
+				exclude: /node_modules/,
 				use: [{
 					loader: `babel-loader`,
 					options: {
@@ -52,7 +53,7 @@ module.exports = {
 								require('autoprefixer')(),
 								require('csswring')({removeallcomments: true}),
 								require('cssnano')({discardComments: {removeAll: true}}),
-								require('postcss-cssnext')(),
+								require('postcss-cssnext')({warnForDuplicates: false}),
 								require('postcss-custom-properties')(),
 								require('postcss-flexbugs-fixes'),
 								require('postcss-import')(),

@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import TopNav from 'Frontend/components/Nav/TopNav';
 import IntroBanner from 'Frontend/components/Banner/IntroBanner';
+import TechUsedBanner from 'Frontend/components/Banner/TechUsedBanner';
 import ComponentExampleBanner from 'Frontend/components/Banner/ComponentExampleBanner';
 import FooterBanner from 'Frontend/components/Banner/FooterBanner';
 

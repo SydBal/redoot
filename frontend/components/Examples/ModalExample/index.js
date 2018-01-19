@@ -3,10 +3,6 @@ import {connect} from 'react-redux';
 
 class ModalExample extends React.Component {
 
-    findVowels(str){
-        return (str.match(/[aeiouy]/ig)||[]);
-    }
-
 	render() {
 		return (
             <div>
@@ -59,7 +55,6 @@ class ModalExample extends React.Component {
                         </div>
                     </div>
                 </div>
-
             </div>
 		);
 	}
